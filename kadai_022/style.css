@@ -1,0 +1,109 @@
+body, p, h1 {
+ /*h1、p、body要素の上下左右余白（margin）を0にする*/
+  margin: 0%;
+}
+
+header {
+ /*下の余白を20pxにする*/
+  margin-bottom: 20px;
+ /*背景色を「 rgb(244, 79, 79)」にする*/
+  background-color: rgb(244, 79, 79);
+ /*中の要素が中央揃えになるようにする*/
+  text-align:center;
+}
+
+h1 {
+ /*h1要素の上下左右余白（margin）を0にする*/
+  margin: 0%;
+ /*文字色をrgb(255, 255, 255)にする*/ 
+  color: rgb(255, 255, 255);
+}
+
+main {
+ /*main要素内の余白を上下左右とも10pxにする*/ 
+  margin: 10px;
+}
+
+#parent {
+ /*親要素*/   
+  display: flex;
+ /*均等な間隔で配置する*/
+  justify-content: space-evenly;
+}
+
+.contents {
+ /*太さ3px、実線、色*/
+  border: solid 3px rgb(238, 204, 204);
+ /*幅は親要素の25%にする*/  
+  flex-basis: 25%;
+ /*要素外の余白は上下20px、左右0にする*/   
+  margin: 20px 0px;
+ /*要素内の余白は上下10px、左右15pxにする*/ 
+  padding: 10px 15px;
+ /*中の要素が中央揃えになるようにする*/
+  text-align:center;
+}
+
+h2::before{
+ /*前に「●」記号,色はrgb(239, 111, 139)*/    
+  content: "●";
+  color: rgb(239, 111, 139);
+}
+ 
+h2 {
+ /*フォントサイズを25px*/   
+  font-size: 25px;
+ /*下線（太さ3px、点線、色rgb(236, 122, 122)）*/   
+  border-bottom: dotted 3px rgb(236, 122, 122);
+}
+ 
+ /*class名contents内の二番目のp要素内のテキストの中で一番目の文字*/  
+p:nth-child(3)::first-letter{
+ /*太字、文字色はrgb(97, 206, 249)*/  
+  font-weight:bold;
+  color: rgb(97, 206, 249);
+}
+
+img {
+ /*要素外の余白は上下20px、左右0、幅は70%*/   
+  margin: 10px 0px;
+  width: 70%;
+}
+
+footer{
+ /*背景色を「rgb(244, 79, 79)」にする*/
+  background-color: rgb(244, 79, 79);
+ /*中の要素が中央揃えになるようにする*/
+  text-align:center; 
+}
+
+a{
+/*文字色はrgb(255, 255, 255)*/
+  color: rgb(255, 255, 255);
+}
+
+a:visited {
+/*訪問済みリンクの文字色がrgb(193, 234, 251)*/
+  color: rgb(193, 234, 251);
+}
+
+a:hover {
+/*マウスカーソルが乗ると文字色がrgb(245, 178, 168)*/
+  color: rgb(245, 178, 168);
+}
+
+
+/* 以下の例では、画面幅が768px以下のときにスタイルが適用されます */
+@media screen and (max-width: 768px) {
+  #parent {
+    display: block;
+   }
+  h2{
+    font-size: 30px;
+  }
+  p{
+    font-size: 25px; 
+  }
+}
+
+
